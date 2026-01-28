@@ -1,0 +1,32 @@
+html {
+  background-color: #1e2848;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  color: #95cc50;
+}
+
+.personagens .personagem {
+  background: #283a6b;
+  width: 300px;
+}
+
+.personagens .personagem img {
+  width: 300px;
+}
+
+.personagens .personagem p {
+  color: white;
+}
+
+.personagens .personagem span {
+  color: black;
+  background: green;
+}
