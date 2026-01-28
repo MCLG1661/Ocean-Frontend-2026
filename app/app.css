@@ -2,6 +2,10 @@ html {
   background-color: #1e2848;
 }
 
+h1, p, span {
+  font-family: sans-serif;
+}
+
 .header {
   text-align: center;
 }
@@ -13,13 +17,44 @@ html {
   color: #95cc50;
 }
 
+.personagens {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
 .personagens .personagem {
   background: #283a6b;
   width: 300px;
+  border-radius: 16px;
 }
 
 .personagens .personagem img {
   width: 300px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.personagens .personagem .detalhes {
+  padding-left: 16px;
+  padding-bottom: 18px;
+}
+
+.personagens .personagem .detalhes .nome { 
+  font-size: 18px;
+}
+
+.personagens .personagem .detalhes .especie { 
+  font-size: 14px;
+  color: grey;
+}
+
+.personagens .personagem .detalhes .vida { 
+  font-size: 14px;
+  color: lightgrey;
+  padding: 5px 10px;
+  border-radius: 8px;
 }
 
 .personagens .personagem p {
