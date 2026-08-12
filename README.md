@@ -114,3 +114,60 @@ npm run dev
 3) A aplicação será executada localmente em:
 
 http://localhost:5173
+
+---
+
+## 📦 Build
+
+Para gerar uma versão de produção :
+
+npm run build
+
+---
+
+## 🐳 Docker
+
+O projeto também possui configuração para execução utilizando Docker.
+
+**Build da Imagem**
+
+docker build -t ocean-frontend-2026
+
+**Executar o Container**
+
+docker run -p 3000:3000 ocean-frontend-2026
+
+---
+
+## 💡 Competências Desenvolvidas
+
+- ReactJS
+- TypeScript
+- Desenvolvimento Front-end
+- Componentização
+- React Router
+- Vite
+- Tailwind CSS
+- Node.js
+- npm
+- Estruturação de aplicações web
+- Git e GitHub
+- Fundamentos de containerização com Docker
+
+---
+
+## 👨‍💻 Autor
+
+Marcus Guedes
+
+Marketing | Data Science | Inteligência Artificial | Gestão de Projetos
+
+GitHub: MCLG1661
+
+LinkedIn: Marcus Guedes
+
+---
+
+⭐ Projeto desenvolvido durante o **Samsung Ocean 2026 — Introdução ao Frontend com ReactJS**
+
+
