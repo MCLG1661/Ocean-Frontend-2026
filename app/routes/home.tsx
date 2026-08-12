@@ -3,23 +3,14 @@ import { Personagens } from "../welcome/personagens";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Ocean Frontend 2026" },
+    {
+      name: "description",
+      content: "Projeto Frontend desenvolvido no Samsung Ocean 2026",
+    },
   ];
 }
 
 export default function Home() {
   return <Personagens />;
-}import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
-
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
-}
-
-export default function Home() {
-  return <Welcome />;
 }
