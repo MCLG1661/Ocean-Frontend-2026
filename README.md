@@ -58,9 +58,59 @@ Build da Aplicação
 
 
 **ReactJS** -	Construção da interface baseada em componentes
+
 **TypeScript** - Desenvolvimento com tipagem estática
+
 **React Router** -	Navegação e estrutura de rotas
+
 **Vite** -	Build e ambiente de desenvolvimento
+
 **Tailwind CSS** -	Estilização da interface
+
 **Node.js / npm** -	Gerenciamento do ambiente e dependências
+
 **Docker** -	Containerização da aplicação
+
+---
+
+## 📂 Estrutura do Projeto
+
+```text
+Ocean-Frontend-2026/
+│
+├── app/
+├── public/
+│
+├── .dockerignore
+├── .gitignore
+├── Dockerfile
+├── package.json
+├── package-lock.json
+├── react-router.config.ts
+├── tsconfig.json
+├── vite.config.ts
+├── LICENSE
+└── README.md
+
+```
+
+---
+
+## 🚀 Executando o Projeto
+
+Pré-requisitos
+
+- Node.js
+- npm
+
+1) Clone o repositório e instale as dependências:
+
+npm install
+
+2) Inicie o ambiente de desenvolvimento:
+
+npm run dev
+
+3) A aplicação será executada localmente em:
+
+http://localhost:5173
