@@ -1,4 +1,4 @@
-# Welcome to React Router!
+# ⚛️ Ocean Frontend 2026 — ReactJS
 
 A modern, production-ready template for building full-stack React applications using React Router.
 
