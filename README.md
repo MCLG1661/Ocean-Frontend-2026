@@ -152,7 +152,7 @@ docker run -p 3000:3000 ocean-frontend-2026
 - npm
 - Estruturação de aplicações web
 - Git e GitHub
-- Fundamentos de containerização com Docker
+- Fundamentos de containerização com Docker 
 
 ---
 
