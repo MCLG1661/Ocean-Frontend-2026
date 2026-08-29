@@ -8,7 +8,7 @@
 ![React Router](https://img.shields.io/badge/React%20Router-Routing-CA4245?logo=reactrouter&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-Styling-06B6D4?logo=tailwindcss&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Container-2496ED?logo=docker&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Concluído-brightgreen)
+![Status](https://img.shields.io/badge/Status-Concluído-brightgreen) 
 
 Projeto desenvolvido durante o curso **Introdução ao Frontend com ReactJS — Samsung Ocean 2026**, com foco na aplicação prática dos fundamentos do desenvolvimento de interfaces utilizando o ecossistema React.
 O projeto explora conceitos de componentização, organização de aplicações Front-end, TypeScript, estilização e utilização do React Router para construção de aplicações web modernas.
