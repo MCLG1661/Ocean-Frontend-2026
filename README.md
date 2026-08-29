@@ -76,22 +76,25 @@ Build da Aplicação
 ## 📂 Estrutura do Projeto
 
 ```text
-Ocean-Frontend-2026/
+Samsung-Ocean-Frontend-2026/
 │
 ├── app/
 ├── public/
+├── screenshots/
+│   ├── home.png
+│   ├── navigation.png
+│   └── responsive.png
 │
 ├── .dockerignore
 ├── .gitignore
 ├── Dockerfile
+├── LICENSE
+├── README.md
 ├── package.json
 ├── package-lock.json
-├── react-router.config.ts
+├── react-router.config.ts 
 ├── tsconfig.json
-├── vite.config.ts
-├── LICENSE
-└── README.md
-
+└── vite.config.ts 
 ```
 
 ---
