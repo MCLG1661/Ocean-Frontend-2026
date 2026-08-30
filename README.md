@@ -1,4 +1,4 @@
-# ⚛️ Ocean Frontend 2026 — ReactJS
+# ⚛️ Rick and Morty Explorer - Ocean Frontend 2026 — ReactJS
 
 *Introdução ao Desenvolvimento Front-end com ReactJS*
 
@@ -10,8 +10,9 @@
 ![Docker](https://img.shields.io/badge/Docker-Container-2496ED?logo=docker&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Concluído-brightgreen) 
 
-Projeto desenvolvido durante o curso **Introdução ao Frontend com ReactJS — Samsung Ocean 2026**, com foco na aplicação prática dos fundamentos do desenvolvimento de interfaces utilizando o ecossistema React.
-O projeto explora conceitos de componentização, organização de aplicações Front-end, TypeScript, estilização e utilização do React Router para construção de aplicações web modernas.
+Aplicação frontend desenvolvida com React e TypeScript para explorar personagens do universo de Rick and Morty por meio de integração com uma API REST.
+
+![Rick and Morty Explorer](images/rick-morty-explorer-home.png)
 
 ---
 
