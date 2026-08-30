@@ -16,162 +16,223 @@ Aplicação frontend desenvolvida com React e TypeScript para explorar personage
 
 ---
 
-## 🎯 Objetivo
+## 🚀 Sobre o projeto
 
-Aplicar os fundamentos do desenvolvimento Front-end utilizando ReactJS, compreendendo a estrutura e organização de uma aplicação baseada em componentes.
-Entre os conceitos explorados estão :
+O **Rick and Morty Explorer** é uma aplicação frontend que permite visualizar e pesquisar personagens do universo de Rick and Morty de forma dinâmica e responsiva.
 
-- ReactJS
-- Componentização
-- TypeScript
-- React Router
-- Gerenciamento da interface
-- Estilização
-- Estrutura de projetos Front-end
-- Build e execução da aplicação
+O projeto teve origem na formação **Frontend Web com ReactJS**, realizada no **Samsung Ocean**, onde foram trabalhados fundamentos de desenvolvimento frontend, JavaScript, React, criação de componentes e integração com aplicações backend.
+
+Posteriormente, o projeto foi evoluído como iniciativa de portfólio, incorporando uma nova interface, TypeScript, consumo dinâmico de API, pesquisa de personagens e melhorias de experiência do usuário.
+
+A evolução do projeto representa a aplicação prática dos conceitos estudados durante a formação, transformando o exercício inicial em uma aplicação frontend mais completa e apresentável.
 
 ---
 
-## 🧩 Arquitetura
+## ✨ Funcionalidades
 
-A aplicação utiliza uma estrutura baseada no ecossistema React :
+- 🔌 Integração com API REST
+- 🔎 Pesquisa dinâmica de personagens por nome
+- 🧩 Renderização dinâmica de componentes
+- 🖼️ Exibição de imagem e informações dos personagens
+- 🟢 Identificação visual do status do personagem
+- 📱 Interface responsiva
+- ⏳ Estado de carregamento
+- ⚠️ Tratamento de erros na consulta à API
+- 🎨 Interface desenvolvida especificamente para o projeto
 
-```text
-Interface
-    ↓
-React
-    ↓
-Componentes
-    ↓
-React Router
-    ↓
-TypeScript
-    ↓
-Vite
-    ↓
-Build da Aplicação
+---
 
-```
+## 🖥️ Interface
+
+### Visão geral
+
+![Home do Rick and Morty Explorer](images/rick-morty-explorer-home.png)
+
+### Busca de personagens
+
+A pesquisa é realizada diretamente no frontend, permitindo filtrar os personagens carregados sem recarregar a página.
+
+![Busca de personagens](images/rick-morty-explorer-search.png)
 
 ---
 
 ## 🛠️ Tecnologias
 
-
-**ReactJS** -	Construção da interface baseada em componentes
-
-**TypeScript** - Desenvolvimento com tipagem estática
-
-**React Router** -	Navegação e estrutura de rotas
-
-**Vite** -	Build e ambiente de desenvolvimento
-
-**Tailwind CSS** -	Estilização da interface
-
-**Node.js / npm** -	Gerenciamento do ambiente e dependências
-
-**Docker** -	Containerização da aplicação
+| Tecnologia | Aplicação |
+|---|---|
+| **React** | Construção da interface e componentes |
+| **TypeScript** | Tipagem e estruturação da aplicação |
+| **React Router** | Estrutura de rotas |
+| **Vite** | Ambiente de desenvolvimento e build |
+| **REST API** | Obtenção dos dados dos personagens |
+| **CSS** | Layout, responsividade e identidade visual |
+| **Vercel** | Deploy da aplicação |
 
 ---
 
-## 📂 Estrutura do Projeto
+## 🔄 Fluxo da aplicação
+
+```text
+Rick and Morty API
+        │
+        ▼
+     Fetch API
+        │
+        ▼
+   React / TypeScript
+        │
+        ├── Loading
+        ├── Error Handling
+        ├── Character State
+        └── Search State
+        │
+        ▼
+  Filtro de personagens
+        │
+        ▼
+ Renderização dos cards
+        │
+        ▼
+ Interface responsiva
+```
+
+---
+
+## 🧠 Conceitos aplicados
+
+Durante o desenvolvimento e evolução do projeto foram aplicados conceitos como:
+
+- componentização em React;
+- gerenciamento de estado com `useState`;
+- efeitos e requisições assíncronas com `useEffect`;
+- consumo de API com `fetch`;
+- tipagem de dados com TypeScript;
+- renderização de listas;
+- filtragem dinâmica de dados;
+- tratamento de estados de loading e erro;
+- responsividade com CSS;
+- separação entre dados, lógica e apresentação.
+
+---
+
+## 📂 Estrutura principal
 
 ```text
 Samsung-Ocean-Frontend-2026/
 │
 ├── app/
-├── public/
-├── screenshots/
-│   ├── home.png
-│   ├── navigation.png
-│   └── responsive.png
+│   ├── routes/
+│   │   └── home.tsx
+│   ├── welcome/
+│   ├── app.css
+│   ├── root.tsx
+│   └── routes.ts
 │
-├── .dockerignore
-├── .gitignore
-├── Dockerfile
-├── LICENSE
-├── README.md
+├── images/
+│   ├── rick-morty-explorer-home.png
+│   └── rick-morty-explorer-search.png
+│
+├── public/
 ├── package.json
-├── package-lock.json
-├── react-router.config.ts 
+├── react-router.config.ts
 ├── tsconfig.json
-└── vite.config.ts 
+├── vite.config.ts
+└── README.md
 ```
 
 ---
 
-## 🚀 Executando o Projeto
+## ▶️ Executando localmente
 
-Pré-requisitos
+### 1. Clone o repositório
 
-- Node.js
-- npm
+```bash
+git clone https://github.com/MCLG1661/Samsung-Ocean-Frontend-2026.git
+```
 
-1) Clone o repositório e instale as dependências:
+### 2. Entre no diretório
 
+```bash
+cd Samsung-Ocean-Frontend-2026
+```
+
+### 3. Instale as dependências
+
+```bash
 npm install
+```
 
-2) Inicie o ambiente de desenvolvimento:
+### 4. Execute o ambiente de desenvolvimento
 
+```bash
 npm run dev
+```
 
-3) A aplicação será executada localmente em:
-
-http://localhost:5173
-
----
-
-## 📦 Build
-
-Para gerar uma versão de produção :
-
-npm run build
+A aplicação estará disponível no endereço indicado pelo terminal.
 
 ---
 
-## 🐳 Docker
+## 🌐 Aplicação online
 
-O projeto também possui configuração para execução utilizando Docker.
+A versão publicada pode ser acessada em:
 
-**Build da Imagem**
-
-docker build -t ocean-frontend-2026
-
-**Executar o Container**
-
-docker run -p 3000:3000 ocean-frontend-2026
+**https://samsung-ocean-frontend-2026.vercel.app/**
 
 ---
 
-## 💡 Competências Desenvolvidas
+## 🎓 Origem acadêmica
 
-- ReactJS
-- TypeScript
-- Desenvolvimento Front-end
-- Componentização
-- React Router
-- Vite
-- Tailwind CSS
-- Node.js
-- npm
-- Estruturação de aplicações web
-- Git e GitHub
-- Fundamentos de containerização com Docker 
+O projeto teve origem na atividade **Frontend Web com ReactJS: Introdução**, do **Samsung Ocean**, abordando fundamentos como:
+
+- criação de projetos frontend;
+- JavaScript;
+- React;
+- componentes;
+- páginas;
+- componentes interativos;
+- integração frontend/backend.
+
+A versão atual representa uma **evolução posterior para portfólio**, mantendo a proposta educacional original e ampliando sua implementação técnica e apresentação.
+
+---
+
+## 📈 Evolução do projeto
+
+### Versão inicial
+
+A implementação original apresentava uma interface introdutória para visualização de personagens, construída durante o processo de aprendizagem de React.
+
+### Portfolio Edition
+
+A versão atual evoluiu o projeto com:
+
+- nova arquitetura da página;
+- interface redesenhada;
+- TypeScript;
+- integração dinâmica com API;
+- sistema de pesquisa;
+- estados de loading e erro;
+- responsividade;
+- deploy em produção;
+- documentação técnica.
+
+Essa evolução demonstra não apenas a implementação de uma aplicação frontend, mas também a capacidade de **revisitar, refatorar e transformar um projeto educacional em uma solução mais estruturada**.
 
 ---
 
 ## 👨‍💻 Autor
 
-Marcus Guedes
+**Marcus Guedes**
 
-Marketing | Data Science | Inteligência Artificial | Gestão de Projetos
+Projeto desenvolvido a partir dos conhecimentos adquiridos no Samsung Ocean e posteriormente evoluído como projeto de portfólio em desenvolvimento frontend, tecnologia e aplicações digitais.
 
-GitHub: MCLG1661
-
-LinkedIn: Marcus Guedes
+- GitHub: **MCLG1661**
+- LinkedIn: **Marcus Guedes**
 
 ---
 
-⭐ Projeto desenvolvido durante o **Samsung Ocean 2026 — Introdução ao Frontend com ReactJS**
+## 📄 Licença
 
+Este projeto possui finalidade educacional e de portfólio.
 
+Os dados e imagens dos personagens são fornecidos pela API utilizada pela aplicação e pertencem aos seus respectivos detentores de direitos.
