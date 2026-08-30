@@ -12,8 +12,6 @@
 
 Aplicação frontend desenvolvida com React e TypeScript para explorar personagens do universo de Rick and Morty por meio de integração com uma API REST.
 
-![Rick and Morty Explorer](images/rick-morty-explorer-home.png)
-
 ---
 
 ## 🚀 Sobre o projeto
