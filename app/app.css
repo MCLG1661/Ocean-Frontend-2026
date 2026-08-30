@@ -1,67 +1,319 @@
-html {
-  background-color: #1e2848;
+* {
+  box-sizing: border-box;
 }
 
-h1, p, span {
-  font-family: sans-serif;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background: #07111f;
+  color: #f4f7fb;
 }
 
-.header {
-  text-align: center;
+body {
+  min-width: 320px;
 }
 
-.header h1 {
-  font-family: sans-serif;
-  font-weight: 400;
-  font-size: 48px;
-  color: #95cc50;
+.explorer {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 80% 5%, rgba(65, 190, 120, 0.12), transparent 30%),
+    radial-gradient(circle at 15% 20%, rgba(39, 110, 241, 0.12), transparent 28%),
+    #07111f;
 }
 
-.personagens {
+/* HERO */
+
+.hero {
+  min-height: 440px;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  padding: 80px 8%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.eyebrow,
+.section-label {
+  display: block;
+  margin-bottom: 16px;
+  color: #67d391;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  margin: 0;
+  max-width: 800px;
+  font-size: clamp(52px, 8vw, 96px);
+  line-height: 0.95;
+  letter-spacing: -4px;
+  font-weight: 300;
+}
+
+.hero h1 strong {
+  display: block;
+  color: #67d391;
+  font-weight: 800;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 30px 0 0;
+  color: #aab6c5;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.tech-stack {
+  display: flex;
   flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.tech-stack span {
+  padding: 8px 14px;
+  border: 1px solid rgba(103, 211, 145, 0.25);
+  border-radius: 30px;
+  background: rgba(103, 211, 145, 0.07);
+  color: #a8e7c0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* CONTEÚDO */
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 70px 5%;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 52px);
+  letter-spacing: -2px;
+}
+
+.search-box {
+  width: min(100%, 380px);
+}
+
+.search-box input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  outline: none;
+  background: #101c2d;
+  color: white;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+.search-box input::placeholder {
+  color: #6f7e90;
+}
+
+.search-box input:focus {
+  border-color: #67d391;
+  box-shadow: 0 0 0 3px rgba(103, 211, 145, 0.1);
+}
+
+.results {
+  margin: 30px 0;
+  color: #718096;
+  font-size: 13px;
+}
+
+/* CARDS */
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 24px;
 }
 
-.personagens .personagem {
-  background: #283a6b;
-  width: 300px;
-  border-radius: 16px;
+.character-card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: #101c2d;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.personagens .personagem img {
-  width: 300px;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+.character-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(103, 211, 145, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
-.personagens .personagem .detalhes {
-  padding-left: 16px;
-  padding-bottom: 18px;
+.image-container {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
 }
 
-.personagens .personagem .detalhes .nome { 
-  font-size: 18px;
+.image-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.35s ease;
 }
 
-.personagens .personagem .detalhes .especie { 
-  font-size: 14px;
-  color: grey;
+.character-card:hover img {
+  transform: scale(1.04);
 }
 
-.personagens .personagem .detalhes .vida { 
-  font-size: 14px;
-  color: lightgrey;
-  padding: 5px 10px;
-  border-radius: 8px;
-}
-
-.personagens .personagem p {
+.status {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: rgba(7, 17, 31, 0.88);
+  backdrop-filter: blur(8px);
   color: white;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-.personagens .personagem span {
-  color: black;
-  background: green;
+.status-alive {
+  color: #73e59e;
+}
+
+.status-dead {
+  color: #ff7474;
+}
+
+.status-unknown {
+  color: #d2d8df;
+}
+
+.card-content {
+  padding: 22px;
+}
+
+.character-id {
+  color: #67d391;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.card-content h3 {
+  margin: 8px 0 22px;
+  color: white;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.character-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.character-info p {
+  margin: 0;
+  color: #dce3eb;
+  font-size: 13px;
+}
+
+.character-info p span {
+  display: block;
+  margin-bottom: 5px;
+  color: #65758a;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* MENSAGENS */
+
+.message {
+  padding: 40px 0;
+  color: #aab6c5;
+  text-align: center;
+}
+
+.message.error {
+  color: #ff7474;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 50px;
+  padding: 35px 5%;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  color: #68778a;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 60px 7%;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .content {
+    padding: 50px 6%;
+  }
+
+  .section-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .character-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .character-grid {
+    grid-template-columns: 1fr;
+  }
 }
